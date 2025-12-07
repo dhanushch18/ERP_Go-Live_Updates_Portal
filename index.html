@@ -88,7 +88,7 @@
 
   .marquee1 span {
     display: inline-block;
-    animation: scroll 16s linear infinite;
+    animation: scroll 8s linear infinite;
   }
 
   @keyframes scroll {
@@ -194,7 +194,8 @@
   th, td {
     border: 1px solid #d7d7d7;
     padding: 7px;
-    text-align: left;
+    text-align: center;
+    /* font-weight: bold; */
   }
 
   th {
@@ -434,7 +435,7 @@ table td {
   <div class="stat-card"><h2>Resolved</h2><div class="value">26</div></div>
   <div class="stat-card"><h2>Unresolved</h2><div class="value">7</div></div>
   <div class="stat-card"><h2>Partially resolved</h2><div class="value">1</div></div>
-  <div class="stat-card"><h2>Overall Success Rate</h2><div class="value">+77%</div></div>
+  <div class="stat-card"><h2>Overall Resolved Rate</h2><div class="value">+77%</div></div>
   <!-- <div class="stat-card"><h2>Client BOQ & Project Costing</h2><div class="value"></div></div> -->
    <!-- <div class="stat-card">
 
@@ -460,27 +461,29 @@ table td {
   <!-- LEFT SIDE -->
   <section class="section">
     <h2>Entities Status</h2>
-    <table>
+    <table style="font-weight: bold;">
       <thead>
         <tr>
-          <th>Entity</th><th>New Item Request</th><th>Material Request (MR)</th><th>Purchase Order  (PO)</th>
+          <th>Entity</th><th>New Item Request</th><th>Material Request (MR)</th><th>Purchase Order(PO)</th><th style="width:10%;">GRN</th><th>Sales/Services Order</th><th>AP Invoices</th><th>Payment Vouchers</th><th>Client BOQ</th><th>Internal BOQ</th>
         </tr>
       </thead>
       <tbody>
-        <tr><td>Riyadh Villa Construction</td><td>1501</td><td>13</td><td>2</td>
+        <tr><td style="text-align: left;">RVCC</td><td>26</td><td>21</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
           <!-- <td><div class="progress-bar"><div class="progress" style="width:75%;color: black;"><strong>50%</strong></div></div></td></tr> -->
-        <tr><td>GITCO</td><td>1</td><td>7</td><td>1</td>
+        <tr><td style="text-align: left;">GITCO</td><td>1</td><td>7</td><td>10</td><td>50</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
 
         </td>
           <!-- <td><div class="progress-bar"><div class="progress" style="width:85%;color: black"><strong>90%</strong></div></div></td></tr> -->
-        <tr><td>MMTS</td><td>1</td><td >0</td><td>1</td>
+        <tr><td style="text-align: left;">MMTS</td><td>1</td><td>1</td><td>0</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+        <tr><td style="text-align: left;">ARAMCO</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+        <tr><td style="text-align: left;">RVCC Metal Factory</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
           <!-- <td><div class="progress-bar"><div class="progress" style="width:85%;color: black"><strong>90%</strong></div></div></td></tr> -->
       </tbody>
     </table>
   </section>
 
   <!-- RIGHT SIDE -->
-  <section class="section">
+  <!-- <section class="section">
     <h2>ERP Team Assigned</h2>
     <table>
       <thead>
@@ -496,142 +499,108 @@ table td {
         <tr><td><strong>Dhanush</strong></td><td>Online Reporting & ERP Request form, Item Request form, ERP Updates Portal</td></tr>
       </tbody>
     </table>
-  </section>
+  </section> -->
 
 </div> 
 <!-- END OF dual-sections -->
+<div class="dual-sections" style="max-width:1250px; margin:5px auto; display:flex; gap:16px; box-sizing:border-box;">
 
-<div class="dual-sections" style="max-width:1250px; margin:5px auto;">
+  <!-- COLUMN 1 – Major Critical Issues -->
+  <section class="section" style="flex:1; box-sizing:border-box;">
+    <div class="marquee1"><span>Landed Cost Issue under process </span></div>
 
-  <!-- LEFT SIDE: Milestones -->
-  <section class="section" style="flex:1;">
-    <div class="marquee1">
-  <span>ERP Roll Out Plan Overall on Track | Next Phases - In Progress </span>
-</div>
-    <h2>Major Milestones Progress (Roll-Out Plan)</h2>
-    <table>
+    <h2>Major Critical Issues</h2>
+    <table class="table-plain">
       <thead>
         <tr>
-          <th>Milestone</th>
-          <th>Completion</th>
-          <th>Action Plan/Remarks</th>
+          <th>Major Issue</th>
           <th>Status</th>
         </tr>
       </thead>
       <tbody>
-         <tr>
-        <td>Kick-Off Meeting,SDM Master,SDM(Procurement, Contracts/Subcontracts, Budget, Finance, HR)</td>
-        <td><div class="progress-bar" style="height:10px;"><div class="progress" style="width:100%; font-size:8px;color: black"><strong>100%</strong></div></div></td>
-        <td>Live & Test entries </td>
-        <td>Complete</td>
-      </tr>
-      <tr>
-        <td>Master Setup & System Configuration</td>
-        <td><div class="progress-bar" style="height:10px;"><div class="progress" style="width:85%; font-size:8px;color: black"><strong>85%</strong></div></div></td>
-        <td>Setup</td>
-        <td>Ongoing</td>
-      </tr>
-      <tr>
-        <td>Process Development & Mapping
-          </td>
-        <td><div class="progress-bar" style="height:10px;"><div class="progress" style="width:90%; font-size:8px;color: black"><strong>90%</strong></div></div></td>
-        <td>Mapping</td>
-        <td>Ongoing</td>
-      </tr>
-      <tr>
-        <td>Data Migration - RVCC</td>
-        <td><div class="progress-bar" style="height:10px;"><div class="progress" style="width:70%; font-size:8px;color: black"><strong>70%</strong></div></div></td>
-        <td>Preparations</td>
-        <td>Ongoing</td>
-      </tr>
-      <tr>
-        <td>Operational & MIS Reports 
-          <!-- - Reposting Matrix & Formatting request -->
-        </td>
-        <td><div class="progress-bar" style="height:10px;"><div class="progress" style="width:40%; font-size:8px;color: black"><strong>40%</strong></div></div></td>
-        <td>Formatting & Uploading </td>
-        <td>Ongoing</td>
-      </tr>
-      <tr>
-        <td>UAT - Training,Testing & Acceptance - Sign-Off</td>
-        <td><div class="progress-bar" style="height:10px;"><div class="progress" style="width:80%; font-size:8px;color: black"><strong>90%</strong></div></div></td>
-        <td>MMTS Master Data</td>
-        <td>Ongoing</td>
-      </tr>
-
+        <tr>
+          <td style="text-align:left;">Landed Cost on Invoice (GITCO)</td>
+          <td style="text-align:left;">Xpedeon-In Process</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">MR Line Qty Linked to Budget Qty</td>
+          <td style="text-align:left;">Xpedeon-In Process</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">GITCO Consolidated Dashboard</td>
+          <td style="text-align:left;">Xpedeon-Waiting</td>
+        </tr>
+        <tr><td style="text-align:left;">.</td><td></td></tr>
+        <tr><td style="text-align:left;">.</td><td></td></tr>
+        <tr><td style="text-align:left;">.</td><td></td></tr>
       </tbody>
     </table>
   </section>
 
-  <!-- RIGHT SIDE: Animated Achievements -->
-   
-<!-- <section class="section live-announcement">
-  <div class="announcement-circle">
-    <div class="announcement-title">🎉 Announcement 🎉</div>
-    <div class="live-item gitco delay1" style="font-size: 38px;">GITCO <span>LIVE</span></div>
-    <div class="live-item mmts delay2" style="font-size: 38px;">MMTS <span>LIVE</span></div>
-    <div class="live-item rvcc delay3" style="font-size: 38px;">RVCC <span style="font-size: 24px;color: black; ">On Track</span></div>
-  </div>
-</section> -->
-<section class="section live-announcement" style="flex:1; min-height: 370px;" >
-  <div class="marquee2">
-  <span>GITCO & MMTS - Core Operations Live | Continuous Improvement Underway</span>
-</div>
-  <h3 style="font-size:40px; color:#005a9c; margin:0 0 8px 0;">🎉Announcement🎉</h3>
+  <!-- COLUMN 2 – Report Development -->
+   <section class="section" style="flex:1; box-sizing:border-box;">
+    <div class="marquee1"><span>Landed Cost Issue under process </span></div>
 
-  <table style="width:100%; font-size:18px; border-collapse:collapse; margin-top:10px;">
+    <h2>Report Development</h2>
+    <table class="table-plain">
+      <thead>
+        <tr>
+          <th>Report Name</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align:left;">Advance Payment & Payment Request</td>
+          <td style="text-align:left;">Done</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Asset,Material & Service Requisition</td>
+          <td style="text-align:left;">Done</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Purchase Order</td>
+          <td style="text-align:left;">In Process</td>
+        </tr>
+        <tr><td style="text-align:left;">Cost Control Report</td><td style="text-align:left;">In Process</td></tr>
+        <tr><td style="text-align:left;">Certificate for Payment (CFP)</td><td style="text-align:left;">In Process</td></tr>
+        <tr><td style="text-align:left;">Aramco Work Order</td><td style="text-align:left;">In Process</td></tr>
+      </tbody>
+    </table>
+  </section>
 
-    <thead>
-      <tr>
-        <th style="padding:8px; font-size:18px;width:45%;">Entity</th>
-        <th style="padding:8px; font-size:18px;width:55%;">Completed Work</th>
-      </tr>
-    </thead>
+  <!-- COLUMN 3 – Formatting -->
+  <section class="section" style="flex:1; box-sizing:border-box;">
+    <div class="marquee1"><span>Opening Balance under process</span></div>
 
-    <tbody>
-
-      <!-- GITCO ROW -->
-      <tr>
-        <td style="padding:10px;">
-          <div class="live-item gitco delay1" style="font-size:26px; margin:0;margin-left: 10px;">
-            GITCO <span>LIVE</span>
-          </div>
-        </td>
-        <td style="padding:10px; font-size:14px;">
-          Accounts, Procurement,Sales,Inventory,   HR (Planned December)
-        </td>
-      </tr>
-
-      <!-- MMTS ROW -->
-      <tr>
-        <td style="padding:10px;">
-          <div class="live-item mmts delay2" style="font-size:26px; margin:0;margin-left: 10px;">
-            MMTS <span>LIVE</span>
-          </div>
-        </td>
-        <td style="padding:10px; font-size:14px;">
-           Services Work Orders,Sub Contracts,Accounts,Procurement, Inventory, HR (Planned December)
-        </td>
-      </tr>
-
-      <!-- RVCC ROW -->
-      <tr>
-        <td style="padding:10px;">
-          <div class="live-item rvcc delay3" style="font-size:26px; margin:0;margin-left: 5px;">
-            RVCC <span style="font-size:24px; color:black;">On Track</span>
-          </div>
-        </td>
-        <td style="padding:10px; font-size:14px;">
-        Inprogress-Setups,Configurations,Data Migrations
-        </td>
-      </tr>
-
-    </tbody>
-
-  </table>
-</section>
+    <h2>Opening Balance</h2>
+    <table class="table-plain">
+      <thead>
+        <tr>
+          <th>Opening Balance</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align:left;">GITCO & MMTS</td>
+          <td style="text-align:left;">Done</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">RVCC</td>
+          <td style="text-align:left;">Uploading in process</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">HR (Human Resource)</td>
+          <td style="text-align:left;">In Waiting</td>
+        </tr>
+        <tr><td style="text-align:left;">.</td><td></td></tr>
+        <tr><td style="text-align:left;">.</td><td></td></tr>
+        <tr><td style="text-align:left;">.</td><td></td></tr>
+      </tbody>
+    </table>
+  </section>
 
 </div>
-
 </body>
 </html>
