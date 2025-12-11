@@ -132,7 +132,7 @@
 
   .stat-card {
     background: white;
-    width: 200px;
+    width: 158px;
     height: 60px;
     border-radius: 12px;
     padding: 14px;
@@ -248,41 +248,6 @@
   height: 100%;
 }
 
-/* Circular container for announcement */
-/* .announcement-circle {
-  width: 550px;
-  height: 370px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #e8f4ff, #c2e0ff);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 0 25px rgba(131, 178, 230, 0.3);
-  border: 1px solid #89c8f1;
-  position: relative;
-  overflow: hidden;
-  padding: 20px;
-  box-sizing: border-box;
-} */
-
-/* .announcement-circle {
-  width: 390px;
-  height: 240px;
-  border-radius: 60%;
-  background: linear-gradient(135deg, #e8f4ff, #c2e0ff);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 0 18px rgba(131, 178, 230, 0.25);
-  border: 1px solid #89c8f1;
-  position: relative;
-  overflow: hidden;
-  padding: 10px;
-  box-sizing: border-box;
-} */
-
 .announcement-circle {
   border-radius:60%;
   background: linear-gradient(135deg, #e8f4ff, #c2e0ff);
@@ -322,37 +287,6 @@
   50% { transform: scale(1.08); filter: brightness(1.4); }
   100% { transform: scale(1); filter: brightness(1); }
 }
-
-/* Neon flicker/blink effect */
-/* @keyframes neonBlink {
-  0% { opacity: 1; }
-  40% { opacity: 0.6; }
-  50% { opacity: 0.2; }
-  70% { opacity: 0.8; }
-  100% { opacity: 1; }
-} */
-
-/* Light sweep effect */
-/* .live-item::after {
-  content: "";
-  position: absolute;
-  top: 0; left: -100%;
-  width: 100%; height: 100%;
-  background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.9) 50%, transparent 100%);
-  animation: sweep 2.8s infinite;
-} */
-
-/* @keyframes sweep {
-  0% { left: -100%; opacity: 0; }
-  50% { opacity: 1; }
-  100% { left: 100%; opacity: 0; }
-} */
-
-/* Fade-in delay sequence */
-/* .delay1 { animation-delay: 0.4s; }
-.delay2 { animation-delay: 1.2s; } */
-
-/* DIFFERENT COLORS FOR EACH LINE  */
 
 /* 1️⃣ GITCO LIVE – Blue + Green */
 .live-item.gitco {
@@ -435,26 +369,12 @@ table td {
   <div class="stat-card"><h2>Resolved</h2><div class="value">29</div></div>
   <div class="stat-card"><h2>Unresolved</h2><div class="value">19</div></div>
   <div class="stat-card"><h2>Partially resolved</h2><div class="value">5</div></div>
-  <div class="stat-card"><h2>Overall Resolved Rate</h2><div class="value">+54%</div></div>
-  <!-- <div class="stat-card"><h2>Client BOQ & Project Costing</h2><div class="value"></div></div> -->
-   <!-- <div class="stat-card">
-
-  
-  <div style="margin-top:4px; line-height:25px;">
-    <div class="live-item boq" style="font-size:16px; margin:0;">
-      CLIENT BOQ &
-    </div>
-    <div class="live-item boq" style="font-size:16px; margin:0;">
-      <span>PROJECT COSTING</span>
-    </div>
-  </div> -->
+  <div class="stat-card"><h2>Not possible</h2><div class="value">2</div></div>
+  <div class="stat-card"><h2>Overall Resolved Rate</h2><div class="value">+55%</div></div>
 
 </div>
 </section>
 
-<!-- =========================== -->
-<!-- SIDE-BY-SIDE LAYOUT STARTS -->
-<!-- =========================== -->
 
 <div class="dual-sections">
 
@@ -473,33 +393,12 @@ table td {
         <tr><td style="text-align: left;">GITCO</td><td>1</td><td>7</td><td>10</td><td>7</td><td>50</td><td>5</td><td>0</td><td>0</td><td>0</td>
 
         </td>
-          <!-- <td><div class="progress-bar"><div class="progress" style="width:85%;color: black"><strong>90%</strong></div></div></td></tr> -->
         <tr><td style="text-align: left;">MMTS</td><td>1</td><td>0</td><td>1</td><td>0</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td>
         <tr><td style="text-align: left;">ARAMCO</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>4</td><td>0</td>
         <tr><td style="text-align: left;">RVCC Metal Factory</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
-          <!-- <td><div class="progress-bar"><div class="progress" style="width:85%;color: black"><strong>90%</strong></div></div></td></tr> -->
       </tbody>
     </table>
   </section>
-
-  <!-- RIGHT SIDE -->
-  <!-- <section class="section">
-    <h2>ERP Team Assigned</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Members</th><th>Assigned Work</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td><strong>Aamir</strong></td><td>Leading implementation</td></tr>
-        <tr><td><strong>Aryan</strong></td><td>System Setups and configurations,Master data uploads</td></tr>
-        <tr><td><strong>Varsha</strong></td><td>Create BOQ in Test system, Retail Building BOQ & Project Costing</td></tr>
-        <tr><td><strong>Emad</strong></td><td>Create BOQ in Test system,Retail Building BOQ & Project Costing</td></tr>
-        <tr><td><strong>Dhanush</strong></td><td>Online Reporting & ERP Request form, Item Request form, ERP Updates Portal</td></tr>
-      </tbody>
-    </table>
-  </section> -->
 
 </div> 
 <!-- END OF dual-sections -->
@@ -600,7 +499,6 @@ table td {
       </tbody>
     </table>
   </section>
-
 </div>
 </body>
 </html>
