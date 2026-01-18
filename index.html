@@ -86,9 +86,25 @@
     border-bottom: 1px solid #bcdcff;
   }
 
-  .marquee1 span {
+    .marquee1 span {
     display: inline-block;
-    animation: scroll 8s linear infinite;
+    animation: scroll 14s linear infinite;
+  }
+
+    .marquee11 {
+    background-color: #c7f0b1;
+    color: #005a9c;
+    padding: 6px 20px;
+    font-size: 10px;
+    font-weight: 600;
+    overflow: hidden;
+    white-space: nowrap;
+    border-bottom: 1px solid #bcdcff;
+  }
+
+  .marquee11 span {
+    display: inline-block;
+    animation: scroll 14s linear infinite;
   }
 
   @keyframes scroll {
@@ -157,6 +173,91 @@
     font-weight: bold;
     color: #007f00;
   }
+
+/* 
+   .stat-card1 {
+    background: white;
+    width: 158px;
+    height: 60px;
+    border-radius: 12px;
+    padding: 14px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+  }
+
+  .stat-card1:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.18);
+  }
+
+  .stat-card1 h2 {
+    font-size: 14px;
+    color: #005a9c;
+    margin-bottom: 6px;
+  }
+
+  .stat-card1 .value {
+    font-size: 22px;
+    font-weight: bold;
+    color: #007f00;
+  } */
+
+
+  
+.stat-card1 {
+  background: white;
+  width: 158px;
+  height: 60px;                /* keep fixed height */
+  border-radius: 12px;
+  padding: 14px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: 0.3s ease;
+  position: relative;          /* needed for the fade */
+}
+
+.stat-card1:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.18);
+}
+
+.stat-card1 h2 {
+  font-size: 14px;
+  color: #005a9c;
+  margin: 0 0 6px 0;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;       /* show up to 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  white-space: normal;
+  line-height: 1.2;
+  max-height: calc(1.2em * 2); /* helps non-WebKit engines */
+  overflow-wrap: anywhere;
+}
+
+/* Optional: fade-out mask at the bottom for a softer cut */
+.stat-card1::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 14px;                /* match padding for best look */
+  pointer-events: none;
+  background: linear-gradient(to bottom,
+              rgba(255,255,255,0) 0%,
+              rgba(255,255,255,1) 90%);
+}
+
+/* Value line: keep single line (or see Option C for wrapping) */
+.stat-card1 .value {
+  font-size: 22px;
+  font-weight: bold;
+  color: #007f00;
+  white-space: nowrap;         /* keep numeric values tidy */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
   /* SECTIONS IN TWO COLUMNS */
   .dual-sections {
@@ -365,10 +466,10 @@ table td {
 </div>
 
 <section class="stats">
-  <div class="stat-card"><h2>Total Issues</h2><div class="value">74</div></div>
-  <div class="stat-card"><h2>Resolved</h2><div class="value">45</div></div>
-  <div class="stat-card"><h2>Unresolved</h2><div class="value">27</div></div>
-  <div class="stat-card"><h2>Partially Resolved</h2><div class="value">0</div></div>
+  <div class="stat-card"><h2>GITCO Stock Movement</h2><div class="value">0.36%</div></div>
+  <div class="stat-card1"><h2>GITCO AP Invoices Pending</h2><div class="value">95%</div></div>
+  <div class="stat-card1"><h2>RVCC Pending Contracts</h2><div class="value">12</div></div>
+  <div class="stat-card"><h2>RVCC IP's Pending</h2><div class="value">90%</div></div>
   <div class="stat-card"><h2>Not Possible</h2><div class="value">2</div></div>
   <div class="stat-card"><h2>Overall Resolved Rate</h2><div class="value">+60%</div></div>
 
@@ -379,26 +480,7 @@ table td {
 <div class="dual-sections">
 
   <!-- LEFT SIDE -->
-  <section class="section">
-    <h2>Entities Status</h2>
-    <table style="font-weight: bold;">
-      <thead>
-        <tr>
-          <th>Entity</th><th>New Item Request</th><th>Material Request (MR)</th><th>Purchase Order(PO)</th><th style="width:10%;">GRN</th><th>Sales/Services Order</th><th>AP Invoices</th><th>Payment Vouchers</th><th>Client BOQ</th><th>Internal BOQ</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td style="text-align: left;">RVCC</td><td>105</td><td>164</td><td>536</td><td>8</td><td>11</td><td>46</td><td>45</td><td>153</td><td>2</td>
-          <!-- <td><div class="progress-bar"><div class="progress" style="width:75%;color: black;"><strong>50%</strong></div></div></td></tr> -->
-        <tr><td style="text-align: left;">GITCO</td><td>123</td><td>4</td><td>277</td><td>44</td><td>620</td><td>5</td><td>0</td><td>0</td><td>0</td>
-
-        </td>
-        <tr><td style="text-align: left;">MMTS</td><td>2</td><td>0</td><td>1</td><td>2</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td>
-        <tr><td style="text-align: left;">ARAMCO</td><td>26</td><td>0</td><td>6</td><td>0</td><td>5</td><td>35</td><td>2</td><td>4</td><td>0</td>
-        <tr><td style="text-align: left;">RVCC Metal Factory</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
-      </tbody>
-    </table>
-  </section>
+ 
 
 </div> 
 <!-- END OF dual-sections -->
@@ -408,9 +490,125 @@ table td {
   <section class="section" style="flex:1; box-sizing:border-box;">
     <div class="marquee1"><span>Landed Cost Issue under process </span></div>
 
-    <h2>Major Critical Issues</h2>
+    <h2>Client Contract & BOQ's (CVR Closure)</h2>
     <table class="table-plain">
       <thead>
+        <tr>
+          <th>Major Issue</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align:left;">Total Projects with Contracts</td>
+          <td style="text-align:left;"><strong>21/33 (64%)</strong></td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Total Projects vs Budgets</td>
+          <td style="text-align:left;"><strong>29%</strong></td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Contract vs Budget Cycle</td>
+          <td style="text-align:left;"><strong>On Track(Smooth Working)</strong></td>
+        </tr>
+        <tr><td style="text-align:left;">Budget vs Actual</td><td style="text-align:left;"><strong>10/21</strong></td></tr>
+        
+ <tr>
+    <td style="text-align:left;" colspan="2">
+     <strong> Contracts, Cost &amp; Budgets </strong> are implemented smoothly with no major processing issues, and core reports are standardized. 
+      However, data utilization remains low, with 7% IPCs processed, 26% contracts budgeted, and 5% Budget vs. Actual cost tracking. 
+      Full value depends on department managers driving consistent ERP usage.
+    </td>
+  </tr>
+
+      </tbody>
+    </table>
+  </section>
+
+  <!-- COLUMN 2 – Report Development -->
+   <section class="section" style="flex:1; box-sizing:border-box;">
+    <div class="marquee1"><span>06 Core Reports Formatted / 05+ Under process</span></div>
+
+    <h2>Financial Closure</h2>
+    <table class="table-plain">
+      <thead>
+        <tr>
+          <th>Report Name</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align:left;">Advance Payment & Payment Request</td>
+          <td style="text-align:left;">Done</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Asset,Material & Service Requisition</td>
+          <td style="text-align:left;">Done</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Purchase Order,Contract & Sub-Contract</td>
+          <td style="text-align:left;">Done</td>
+        </tr>
+        <tr><td style="text-align:left;">Cost Control Report</td><td style="text-align:left;">In Process</td></tr>
+        <tr><td style="text-align:left;">Certificate for Payment (CFP)</td><td style="text-align:left;">In Process</td></tr>
+        <tr><td style="text-align:left;">Aramco Work Order</td><td style="text-align:left;">In Process</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- COLUMN 3 – Formatting -->
+  <section class="section" style="flex:1; box-sizing:border-box;">
+    <div class="marquee1"><span>Operations,Procurement,HR Closures working smoothly</span></div>
+
+    <h2>Operations,Procurement,HR Closures</h2>
+    <table class="table-plain">
+      <thead>
+        <tr>
+          <th>Task / Modules</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align:left;">GITCO,RVCC - Payroll Generated </td>
+          <td style="text-align:left;">On Track</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">Procurement Cycle (MR to PO)</td>
+          <td style="text-align:left;">On Track</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">HR & Procurement Monthly Transactions</td>
+          <td style="text-align:left;">On Track</td>
+        </tr>
+        <tr><td style="text-align:left;">ARAMCO - Work Orders & <span style="color: red;">Invoices</span></td><td style="text-align:left;">On Track</td></tr>
+        <!-- <tr><td style="text-align:left;">Procure to Pay-MR,PO,GRN,AP Invoices</td><td style="text-align:left;">Live</td></tr>
+        <tr><td style="text-align:left;">RVCC Metal Factory</td><td style="text-align:left;">Planned</td></tr> -->
+         <tr>
+    <td style="text-align:left;" colspan="2"><strong>Procurement and HR operations</strong> are largely stable. The full procurement cycle, including contracts and orders, has been fully captured in the system since December. HR processes are in place, and January 2026 payroll is expected to run smoothly pending final HR–Finance alignment. GRN entries remain low and require timely posting by a single responsible owner, with Finance overseeing validation.
+  </tr>
+      </tbody>
+    </table>
+  </section>
+</div>
+
+
+</div> 
+<!-- END OF dual-sections -->
+
+
+<div class="dual-sections">
+
+<div class="dual-sections" style="max-width:1250px; margin:5px auto; display:flex; gap:16px; box-sizing:border-box;">
+
+  <!-- COLUMN 1 – Major Critical Issues -->
+  <section class="section" style="flex:1; box-sizing:border-box;">
+    <div class="marquee11"><span>Inventory Movement-3,813:Total PO:-1M:AP Invoices:-54K:API To be Invoiced:-95%</span></div>
+
+    <h2>GITCO Closure</h2>
+    <!-- <table class="table-plain"> -->
+      <!-- <thead>
         <tr>
           <th>Major Issue</th>
           <th>Status</th>
@@ -432,15 +630,23 @@ table td {
         <tr><td style="text-align:left;">Change Ammendement in BOQ</td><td style="text-align:left;">Xpedeon-Waiting</td></tr>
         <tr><td style="text-align:left;">.</td><td></td></tr>
         <tr><td style="text-align:left;">.</td><td></td></tr>
-      </tbody>
-    </table>
+      </tbody> -->
+
+      
+ <img
+    src="gitco.jpeg"
+    alt="GITCO closure status illustration"
+    style="max-width:100%; height:auto; display:block; margin:12px 0;"
+  />
+
+    <!-- </table> -->
   </section>
 
   <!-- COLUMN 2 – Report Development -->
    <section class="section" style="flex:1; box-sizing:border-box;">
     <div class="marquee1"><span>06 Core Reports Formatted / 05+ Under process</span></div>
 
-    <h2>Report Development</h2>
+    <h2>MMTS Closure</h2>
     <table class="table-plain">
       <thead>
         <tr>
@@ -472,33 +678,34 @@ table td {
   <section class="section" style="flex:1; box-sizing:border-box;">
     <div class="marquee1"><span>OPB & Data Migration under process</span></div>
 
-    <h2>Overall Live Status</h2>
+    <h2>Executive Dashboard & Other Reports</h2>
     <table class="table-plain">
       <thead>
-        <tr>
-          <th>Task / Modules</th>
+         <tr>
+          <th>Report Name</th>
           <th>Status</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td style="text-align:left;">GITCO & MMTS - All Modules</td>
-          <td style="text-align:left;">Live</td>
+          <td style="text-align:left;">Advance Payment & Payment Request</td>
+          <td style="text-align:left;">Done</td>
         </tr>
         <tr>
-          <td style="text-align:left;">RVCC - OPB & Data Migration</td>
-          <td style="text-align:left;">Live</td>
+          <td style="text-align:left;">Asset,Material & Service Requisition</td>
+          <td style="text-align:left;">Done</td>
         </tr>
         <tr>
-          <td style="text-align:left;">HR & Finance (GL) - Transactions</td>
-          <td style="text-align:left;">Live</td>
+          <td style="text-align:left;">Purchase Order,Contract & Sub-Contract</td>
+          <td style="text-align:left;">Done</td>
         </tr>
-        <tr><td style="text-align:left;">ARAMCO - Work Orders</td><td style="text-align:left;">Live</td></tr>
-        <tr><td style="text-align:left;">Procure to Pay-MR,PO,GRN,AP Invoices</td><td style="text-align:left;">Live</td></tr>
-        <tr><td style="text-align:left;">RVCC Metal Factory</td><td style="text-align:left;">Planned</td></tr>
+        <tr><td style="text-align:left;">Cost Control Report</td><td style="text-align:left;">In Process</td></tr>
+        <tr><td style="text-align:left;">Certificate for Payment (CFP)</td><td style="text-align:left;">In Process</td></tr>
+        <tr><td style="text-align:left;">Aramco Work Order</td><td style="text-align:left;">In Process</td></tr>
       </tbody>
     </table>
   </section>
+  </div>
 </div>
 </body>
 </html>
